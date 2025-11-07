@@ -18,6 +18,8 @@ public class SecurityConfig {
                 .authorizeRequests()
                 .antMatchers("/sistema/usuarios/crear").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
+                .antMatchers("/sistema/swagger-ui/**").permitAll()
+                .antMatchers("/swagger-ui/**").permitAll()
                 .anyRequest().authenticated();
 
         return http.build();
