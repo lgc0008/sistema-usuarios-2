@@ -44,7 +44,6 @@ public class UsuarioServiceImpl implements UsuarioService {
             }
 
             Usuario user = new Usuario();
-//            user.setId(UUID.randomUUID());
             user.setName(usuarioRequest.getName());
             user.setEmail(usuarioRequest.getEmail());
             user.setPassword(new BCryptPasswordEncoder().encode(usuarioRequest.getPassword()));
